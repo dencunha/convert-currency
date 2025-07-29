@@ -42,17 +42,22 @@ function convertCurrency(amount, price, symbol){
         let total = amount * price
         result.textContent = `${total} Reais`
 
+        total = formatCurrencyBRL(total).replace("R$", "")
+
         description.textContent = `${symbol} 1 = ${formatCurrencyBRL(price)}`
 
         if (isNaN(total)) {
             return alert("Por favor, digite o valor corretamente para converter")
         }
-        
+
         footer.classList.add("show-result")
 
     }
     catch {
         footer.classList.remove("show-result")
+
+        console.log(error)
+        alert("Não foi possível converter. Tente novamente mais tarde.")
     }
 }
 
