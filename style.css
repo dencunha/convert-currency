@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(assets/bg.png);
+    background-size: contain;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.12rem;
+}
+
+main {
+    width: 480px;
+    border: 1px solid #2F3279;
+    border-radius: 1.5rem;
+    overflow-y: hidden;
+}
+
+form {
+    background-color: #141534;
+    padding: 3.5rem 4rem;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #B2B8DE;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.bottom {
+    margin-top: 1.25rem;
+}
+
+input, select {
+    background-color: #0E0F25;
+    border: 1px solid #1F2151;
+    border-radius: .5rem;
+
+    padding: 1rem 1.25rem;
+
+    color: #F1F2F6;
+    outline: 0;
+
+    font-size: 1rem;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    background: url("assets/caretdown.svg") no-repeat;
+    background-position: calc(100% - 0.75rem) center;
+    background-color: #0e0f25;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+
+
+
+input:hover, select:hover, input:focus, select:focus {
+    border: 1px solid #4A5DCD;
+}
+
+button {
+    padding: 1rem 1.25rem;
+    margin-top: 3rem;
+
+    background-color: #2F34AB;
+    border: none;
+    border-radius: .5rem;
+    color: #F1F2F6;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #4A5DCD;
+    
+}
+
+button:focus {
+  outline: 1.5px solid #7D8DEC;
+}
+
+footer {
+    background-color: #1F2151;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2.5rem;
+
+    display: none;
+}
+
+.show-result {
+    display: flex;
+}
+
+footer span {
+    color: #7D8DEC;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    line-height: 1.25rem;
+}
+
+footer h1 {
+    color: #F1F2F6;
+    font-size: 2rem;
+    line-height: 3rem;
+}
